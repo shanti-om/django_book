@@ -84,7 +84,7 @@ html {
 }
 
 body {
-    font-family: "Cabin", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica", Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: #2a2e37;
@@ -262,7 +262,7 @@ header .logo-scroll {
 
 header .logo,
 header .logo-2 {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     color: #fff;
     font-size: 40px;
     font-weight: 300;
@@ -460,7 +460,7 @@ header .header-col.mid .social-icons {
     margin: 0;
     float: none;
     text-align: center;
-    font-family: "Cabin";
+    font-family: "Helvetica";
     letter-spacing: 5px;
     font-size: 14px;
     padding: 0;
@@ -588,7 +588,7 @@ header .header-col.mid .social-icons {
 /* ================================================== */
 
 #mainmenu {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     font-size: 13px;
     margin: 0 auto;
     float: none;
@@ -1279,7 +1279,7 @@ header.header-light .logo-2 {
     position: relative;
     font-weight: bold;
     color: #ffffff;
-    font-family: 'Cabin';
+    font-family: 'Helvetica';
     padding-left: 40px;
     font-size: 18px;
     padding-top: 20px;
@@ -1488,14 +1488,14 @@ header.header-light .logo-2 {
 }
 
 .blog-list .date-box .day {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     color: #222222;
     font-weight: bold;
     font-size: 28px;
 }
 
 .blog-list .date-box .month {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     color: #fff;
     font-size: 13px;
     letter-spacing: 3px;
@@ -1746,7 +1746,7 @@ header.header-light .logo-2 {
     margin-right: 20px;
     font-size: 13px;
     color: #999;
-    font-family: "Cabin";
+    font-family: "Helvetica";
 }
 
 .post-author {
@@ -2801,7 +2801,7 @@ a.btn-custom,
 .btn-custom,
 a.btn-slider,
 .btn-slider {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     font-size: 12px;
     min-width: 120px;
 }
@@ -3256,7 +3256,7 @@ hr {
 
 h1,h2,h4,h3,h5,h6,.h1_big,.h1,.h2,.h3,.h4,.h5,.h6,footer.footer-light h5 {
     margin-top: 0;
-    font-family: "Cabin";
+    font-family: "Helvetica";
     font-weight: 900;
     color: #2A2E37;
 }
@@ -3448,7 +3448,7 @@ h4.s1 {
 }
 
 h4.s2 {
-    font-family: "Cabin", Arial, Helvetica, sans-serif;
+    font-family: "Helvetica", Arial, Helvetica, sans-serif;
     font-weight: 200;
     line-height: 1.8em;
 }
@@ -3460,7 +3460,7 @@ h4.s3 {
 }
 
 h4.s3 {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     font-weight: 400;
     font-size: 12px;
     letter-spacing: 15px;
@@ -3513,7 +3513,7 @@ h2.subtitle {
 }
 
 h2.name {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     color: #fff;
     font-size: 84px;
     line-height: 50px;
@@ -3525,7 +3525,7 @@ h2.name span {
 }
 
 h2.name-s1 {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     color: #fff;
     font-size: 84px;
     font-weight: 700;
@@ -3546,7 +3546,7 @@ h2.hw {
 }
 
 h2.deco {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     text-align: center;
     font-weight: 600;
     font-size: 20px;
@@ -3577,7 +3577,7 @@ h2.deco span:after {
 }
 
 h2.hs1 {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     font-size: 40px;
 }
 
@@ -3608,7 +3608,7 @@ h2 .de_light .text-light h2 {
 }
 
 h2.s2 {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     font-weight: 400;
 }
 
@@ -3633,7 +3633,7 @@ h4.title {
 }
 
 h5.s2 {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     letter-spacing: 1px;
     font-size: 14px;
 }
@@ -4820,7 +4820,7 @@ i.font60 {
 
 .pricing-s1 .top .price b {
     color: #fff;
-    font-family: "Cabin";
+    font-family: "Helvetica";
     font-weight: 500;
 }
 
@@ -5039,7 +5039,7 @@ i.font60 {
 
 .pricing-s2 .top .price b {
     font-size: 40px;
-    font-family: "Cabin";
+    font-family: "Helvetica";
     font-weight: 500;
 }
 
@@ -5445,7 +5445,7 @@ i.font60 {
 }
 
 .accordion-section-title {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     color: #2A2E37;
     width: 100%;
     padding: 15px;
@@ -5630,7 +5630,7 @@ i.font60 {
     padding: 30px 0 30px 0;
     color: #ffffff;
     background: #2a2e37;
-    font-family: "Cabin";
+    font-family: "Helvetica";
     font-size: 16px;
     line-height: 20px;
     width: 120px;
@@ -5772,7 +5772,7 @@ i.font60 {
 }
 
 .de_tab.tab_steps.style-2 .de_nav li span {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     background: rgba(255, 255, 255, .1);
     border-radius: 0px;
     font-size: 16px;
@@ -6120,7 +6120,7 @@ i.font60 {
     background: none;
     border: none;
     margin-top: 20px;
-    font-family: "Cabin";
+    font-family: "Helvetica";
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -6172,7 +6172,7 @@ i.font60 {
     border: solid 1px rgba(255, 255, 255, .2);
     padding: 10px 20px 10px 20px;
     margin: 5px;
-    font-family: "Cabin";
+    font-family: "Helvetica";
     text-transform: uppercase;
     letter-spacing: 5px;
 }
@@ -6398,7 +6398,7 @@ a.btn-right {
 
 .de_testi.opt-2 blockquote {
     display: block;
-    font-family: "Cabin";
+    font-family: "Helvetica";
     border: none;
     color: #2A2E37;
     font-weight: 300;
@@ -6457,7 +6457,7 @@ a.btn-right {
 
 
 .de_testi.opt-2 blockquote p {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     font-size: 16px;
     padding: 40px 0 0 0;
     font-weight: 400;
@@ -7812,7 +7812,7 @@ img.img-rounded {
 }
 
 .label {
-    font-family: "Cabin", Arial, Helvetica, sans-serif;
+    font-family: "Helvetica", Arial, Helvetica, sans-serif;
 }
 
 table thead {
@@ -7875,7 +7875,7 @@ p.sub {
 }
 
 blockquote {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
@@ -7887,7 +7887,7 @@ blockquote {
 }
 
 blockquote span {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     display: block;
     font-size: 14px;
     font-style: normal;
@@ -8069,7 +8069,7 @@ blockquote.s1:before {
     color: #555;
     font-size: 16px;
     line-height: 20px;
-    font-family: "Cabin", Arial, Helvetica, sans-serifr;
+    font-family: "Helvetica", Arial, Helvetica, sans-serifr;
     padding: 10px 20px 0px 60px;
     font-weight: 700;
     display: block;
@@ -8494,7 +8494,7 @@ a:hover,
 }
 
 span.overlay {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     text-align: center;
     display: block;
     width: 100px;
@@ -10017,7 +10017,7 @@ section .color-overlay {
 }
 
 .teaser-text {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     font-size: 18px;
     color: rgba(255, 255, 255, .5);
     line-height: normal;
@@ -11380,7 +11380,7 @@ a.read_more i {
 }
 
 .style-2 .date-box .m {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 8px;
@@ -11917,7 +11917,7 @@ a.read_more i {
 
 .de_review blockquote {
     border: none;
-    font-family: "Cabin", Georgia, "Times New Roman", Times, serif;
+    font-family: "Helvetica", Georgia, "Times New Roman", Times, serif;
 }
 
 .de_review .de_nav li span {
@@ -12067,7 +12067,7 @@ a.read_more i {
 }
 
 .very-big-white {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     font-size: 64px;
     color: #fff;
     margin: 0;
@@ -12145,7 +12145,7 @@ a.btn-slider:hover {
 }
 
 #filters {
-    font-family: "Cabin";
+    font-family: "Helvetica";
     padding: 0;
     margin: 0;
     margin-bottom: 20px;
@@ -12461,7 +12461,7 @@ a.btn-slider:hover {
 
 blockquote.very-big {
     border: none;
-    font-family: "Cabin";
+    font-family: "Helvetica";
     text-align: center;
     border: none;
     font-size: 32px;
@@ -12471,7 +12471,7 @@ blockquote.very-big {
 }
 
 blockquote.very-big span {
-    font-family: "Cabin";
+    font-family: "Helvetica";
 }
 
 a,

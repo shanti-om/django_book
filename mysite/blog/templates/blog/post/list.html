@@ -1,0 +1,24 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+{% for post in posts %}
+
+<div class="col-lg-4 col-md-6 mb30" style="background-size: cover;">
+    <div class="bloglist item" style="background-size: cover;">
+        <div class="post-content" style="background-size: cover;">
+            <div class="post-image" style="background-size: cover;">
+                <img alt="" src="images/news/news-thumbnail-1.jpg">
+            </div>
+            <div class="post-text" style="background-size: cover;">
+                <span class="p-tagline">здесь будут теги, через зпт</span>
+                <h4><a href="news-single.html">{{ post.title }}</a></h4>
+                <p>{{ post.get_description }}</p>
+                <span class="p-author">{{ post.author }}</span>
+                <p><span class="link"><a href="#">Читать полностью</a></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+{% endblock %}

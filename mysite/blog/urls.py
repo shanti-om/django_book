@@ -3,6 +3,11 @@ from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 
-urlpatterns = [
-    path('', views.post_list, name='post_list'),
-]
+app_name = 'blog'
+urlpatterns = \
+    [
+        # представления поста
+        path('', views.post_list, name='post_list'),
+        path('<int:id>/', views.post_detail, name='post_detail'),
+    ]
+
