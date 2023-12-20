@@ -34,9 +34,5 @@ class Post(models.Model):
     def get_description(self):
         return self.body[:200] + ' . . .'
 
-    def pub(self):
-        self.published = timezone.now()
-        self.save()
-
     def __str__(self):
         return self.title
