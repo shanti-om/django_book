@@ -1,19 +1,23 @@
 {% extends 'blog/base.html' %}
+{% load static %}
+{% block title %} Блог о программировании на Python и Javascript {% endblock %}
 
 {% block content %}
 {% for post in posts %}
 
 <div class="col-lg-12 col-md-12" style="background-size: cover;">
     <div class="bloglist item p-3 m-1 border" style="background-size: cover;">
-        <div class="post-content" style="background-size: cover;">
-            <div class="post-image" style="background-size: cover;">
-                <img alt="" src="images/news/news-thumbnail-1.jpg">
+        <div class="post-content row" style="background-size: cover;">
+            <div class="post_img col-lg-4" style="background-size: cover;">
+                <img alt="" src="{% static 'images/news/news-thumbnail-1.jpg' %}">
             </div>
-            <div class="post-text" style="background-size: cover;">
+            <div class="post-text col-lg-8" style="background-size: cover;">
                 <span class="p-tagline">здесь будут теги, через зпт</span>
-                <h4><a href="news-single.html">{{ post.title }}</a></h4>
-                <p>{{ post.get_description }}</p>
-                <span class="p-author">{{ post.author }}</span>
+                <h4><a href="{% url 'blog:post_detail' post.id %}">{{ post.title }}</a></h4>
+                <p>{{ post.body|truncatewords:30|linebreaks }}</p>
+                <p class="date">
+                    Автор: {{ post.author }} {{ post.publish }}
+                </p>
                 <p><span class="link"><a href="#">Читать полностью</a></span></p>
             </div>
         </div>
