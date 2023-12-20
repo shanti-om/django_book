@@ -18,7 +18,7 @@
                 <p class="date">
                     Автор: {{ post.author }} {{ post.publish }}
                 </p>
-                <p><span class="link"><a href="#">Читать полностью</a></span></p>
+                <p><span class="link"><a href="{% url 'blog:post_detail' post.id %}">Читать =></a></span></p>
             </div>
         </div>
     </div>
