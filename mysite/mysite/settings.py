@@ -106,7 +106,7 @@ TIME_ZONE = 'Europe/Moscow'
 
 DATETIME_FORMAT = "%Y-%m-%d %H:%M"
 
-USE_I18N = False
+USE_I18N = True
 
 USE_TZ = True
 

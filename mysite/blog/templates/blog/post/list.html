@@ -13,12 +13,16 @@
             </div>
             <div class="post-text col-lg-8" style="background-size: cover;">
                 <span class="p-tagline">здесь будут теги, через зпт</span>
-                <h4><a href="{% url 'blog:post_detail' post.id %}">{{ post.title }}</a></h4>
+                <h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
                 <p>{{ post.body|truncatewords:30|linebreaks }}</p>
                 <p class="date">
-                    Автор: {{ post.author }} {{ post.publish }}
+                    Опубликовано: {{ post.publish }}, автор: {{ post.author }}.
                 </p>
-                <p><span class="link"><a href="{% url 'blog:post_detail' post.id %}">Читать =></a></span></p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a type="button" class="btn btn-outline-primary btn-sm" href="{{ post.get_absolute_url }}">Читать
+                        полностью</a>
+                </div>
+
             </div>
         </div>
     </div>
