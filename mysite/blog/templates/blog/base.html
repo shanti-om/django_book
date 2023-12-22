@@ -1,113 +1,74 @@
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
+{% load blog_tags%}
+{% det_menu as menu1 %}
 
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <title>
-      {% block title %}
-
-      {% endblock %}
+        {% block title %}{% endblock %}
     </title>
-    <link href="{% static 'css/blog.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/blog.css' %}" rel="stylesheet"/>
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('body').css('padding-top', $('.navbar').outerHeight() + 'px')
-            if ($('.smart-scroll').length > 0) { // check if element exists
-                 var last_scroll_top = 0;
-                $(window).on('scroll', function() {
-                    scroll_top = $(this).scrollTop();
-                    if(scroll_top < last_scroll_top) {
-                        $('.smart-scroll').removeClass('scrolled-down').addClass('scrolled-up');
-                    }
-                    else {
-                        $('.smart-scroll').removeClass('scrolled-up').addClass('scrolled-down');
-                    }
-                    last_scroll_top = scroll_top;
-                });
-            }
-        });
-        </script>
+        $(document).ready(function () {
+          $('body').css('padding-top', $('.navbar').outerHeight() + 'px')
+          if ($('.smart-scroll').length > 0) {
+            // check if element exists
+            var last_scroll_top = 0
+            $(window).on('scroll', function () {
+              scroll_top = $(this).scrollTop()
+              if (scroll_top < last_scroll_top) {
+                $('.smart-scroll').removeClass('scrolled-down').addClass('scrolled-up')
+              } else {
+                $('.smart-scroll').removeClass('scrolled-up').addClass('scrolled-down')
+              }
+              last_scroll_top = scroll_top
+            })
+          }
+        })
+    </script>
+</head>
 
-  </head>
+<body>
 
-  <body>
-    <nav class="navbar smart-scroll navbar-expand-lg navbar-dark bg-dark fixed-top" style="height: 70px;">
-      <div class="container-fluid">
-        <!-- Логотип -->
-        <a class="navbar-brand" href="{% url 'blog:post_list' %}"><img src="{% static 'images/logo.png' %}" alt="RAW.code" style="max-height: 70px;" /></a>
+{% show_header %}
 
-        <!-- Кнопка для мобильного меню -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-
-        <!-- Список пунктов меню -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Python</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Javascript</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Алгоритмы</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Django</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'blog:about' %}">О сайте</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="#">Подпункт 1</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Подпункт 2</a>
-                </li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Еще подпункт</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <!-- navbar-collapse.// -->
-        </div>
-
-        <!-- Поле поиска с круглой кнопкой -->
-        <form class="d-flex m-1">
-          <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search" />
-          <button class="btn btn-outline-success" type="submit">Искать</button>
-        </form>
-      </div>
-    </nav>
-
-    <div class="container-fluid">
-      <div class="page row">
+<div class="container">
+    <div class="page row">
         <div class="content col-sm-9">
-          <section aria-label="section" style="background-size: cover;">
-            <div class="container" style="background-size: cover;">
-              <div class="row" style="background-size: cover;">
-                {% block content %}
+            <section aria-label="section" style="background-size: cover;">
+                <div class="container" style="background-size: cover;">
+                    <nav class="breadcrumb mt-4" style="font-size: 13px;">
+                        <a class="breadcrumb-item" href="#">Main</a>
+                        <a class="breadcrumb-item" href="#">Sub</a>
+                        <span class="breadcrumb-item active" aria-current="page">Active</span>
+                    </nav>
 
-                {% endblock %}
-              </div>
-            </div>
-          </section>
+                    <div class="row" style="background-size: cover;">
+                        {% block content %}
+
+                        {% endblock %}
+                    </div>
+                </div>
+            </section>
         </div>
         <div class="sidebar col-sm-3">
-          <h4>Сайдбар</h4>
+            <h4>Сайдбар</h4> </br>
+            <h4>{{ text }}</h4>
+            {% include 'blog/includes/list.html' %}
+
+            {% for ir in menu1 %}
+                {{ir.title}}
+            {% endfor %}
+
         </div>
-      </div>
     </div>
-  </body>
+</div>
+</body>
 </html>

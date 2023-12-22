@@ -11,7 +11,6 @@ class PublishedManager(models.Manager):
 
 
 class Post(models.Model):
-
     class Status(models.TextChoices):
         DRAFT = 'DF', 'Черновик'
         PUBLISHED = 'PB', 'Опубликовано'
@@ -26,6 +25,7 @@ class Post(models.Model):
                               default=Status.DRAFT)
     objects = models.Manager()  # менеджер, применяемый по умолчанию
     published = PublishedManager()  # конкретно-прикладной менеджер
+    category = models.ForeignKey('Category', on_delete=models.PROTECT, null=True)
 
     class Meta:
         ordering = ['-publish']
@@ -37,7 +37,15 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('blog:post_detail', args=[
-                                                 self.publish.year,
-                                                 self.publish.month,
-                                                 self.publish.day,
-                                                 self.slug])
+            self.publish.year,
+            self.publish.month,
+            self.publish.day,
+            self.slug])
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=100, db_index=True)
+    slug = models.SlugField(max_length=255, unique=True, db_index=True)
+
+    def __str__(self) -> str:
+        return self.name
